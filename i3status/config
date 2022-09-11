@@ -1,0 +1,59 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+        output_format = i3bar
+}
+
+order += "tztime holder__hey_man"
+order += "volume master"
+order += "disk /"
+order += "disk /media/teko/hdd"
+order += "load"
+order += "battery all"
+order += "tztime local"
+
+tztime holder__hey_man {
+    format = "holder__hey_man"
+}
+
+battery all {
+        format = "%status %percentage %remaining"
+        integer_battery_capacity = true
+        last_full_capacity = true
+        status_chr = ""
+        status_bat = ""
+        status_unk = ""
+        status_full = ""
+        low_threshold = 20
+        threshold_type = "percentage"
+}
+
+tztime local {
+        format = " %Y-%m-%d %H:%M:%S"
+}
+
+load {
+        format = " %1min"
+}
+
+disk "/" {
+        format = "SSD: %avail"
+}
+
+disk "/media/teko/hdd" {
+        format = "HDD: %avail"
+}
+
+volume master {
+        format = "♪ %volume"
+        format_muted = "♪ muted (%volume)"
+        device = "pulse:alsa_output.pci-0000_00_1f.3.analog-stereo"
+}

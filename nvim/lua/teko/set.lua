@@ -1,4 +1,4 @@
-vim.opt.hlsearch = true 
+vim.opt.hlsearch = false
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
 
@@ -10,7 +10,7 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.nu = true
-vim.opt.relativenumber = true 
+vim.opt.relativenumber = true
 
 vim.opt.cmdheight = 1
 
@@ -24,3 +24,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 100
 
 vim.opt.wrap = false
+
+vim.opt.signcolumn = "yes"
+
+vim.opt.colorcolumn = "80"
